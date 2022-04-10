@@ -1,122 +1,3 @@
-/* Structure of the credit button:
-
-+++ Normal page +++
-
-#page-content [div] (Container of everything you put in the edit window)
-  .creditRate [div] (Container of the credit button)
-    .rateBox [div] (Container of the credit button for normal pages)
-      .rate-box-with-credit-button [div] (Container putting rate-box and credit button in the same visual element. Contains borders, backgroung etc.)
-        .page-rate-widget-box [div] (The standard rate-box)
-          .rate-points [span] (The numerical rating)
-          .rateup btn btn-default [span] (+ button)
-          .ratedown btn btn-default [span] (- button)
-          .cancel btn btn-default [span] (x button)
-        .creditButton [div] (the new i button)
-          .fa fa-info [a] (style of the i button)
-  [div] clear:both (Makes sure this and everything below is placed below floating elements further up)
-  #u-credit-view [div] (Container of the credit window, hidden when Otherwise window is shown)
-    .fader [div] (The faded grey area "behind" the credit window)
-      [iframe] (Script "Start")
-    .modalcontainer [div] (Container of the actual Credit window)
-      .modalbox [div] (The Credit window)
-        .modalbox-title [div] (Title of Credit window)
-        .credit [div] (Credit information)
-        .credit [div] (Button leading to the Otherwise window, only exists when credit:otherwise is in use)
-        .modalbox-ratemodule [div] (Rating module in the Credit window)
-          .page-rate-widget-box [div] (The standard rate-box)
-            .rate-points [span] (The numerical rating)
-            .rateup btn btn-default [span] (+ button)
-            .ratedown btn btn-default [span] (- button)
-            .cancel btn btn-default [span] (x button)
-        ::after (Spacer in the Credit window)
-  #u-credit-otherwise [div] (The Otherwise window, showing additional text; hidden when Credit window is shown (only exists when credit:otherwise is in use))
-    .fader [div] (The faded grey area "behind" the credit window)
-      [iframe] (Script "Otherwise")
-    .modalcontainer [div] (Container of the actual Otherwise window)
-      .modalbox [div] (The Otherwise window)
-        .modalbox-title [div] (Title of Otherwise window)
-        .credit otherwise[div] (Additional credit information)
-          .credit-back [div] (Back-button, returning to Credit window)
-
-+++ Heritage page +++
-
-#page-content [div] (Container of everything you put in the edit window)
-  .creditRate [div] (Container of the credit button)
-    .rateBox (Container of the credit button for heritage pages)
-      .heritage-rating-module [div] (Container putting heritage-emblem, rate-box and credit button in the same visual element.)
-        .heritage-emblem [div] (Heritage icon)
-        .page-rate-widget-box [div] (The standard rate-box)
-          .rate-points [span] (The numerical rating)
-          .rateup btn btn-default [span] (+ button)
-          .ratedown btn btn-default [span] (- button)
-          .cancel btn btn-default [span] (x button)
-        .creditButton [div] (the new i button)
-          .fa fa-info [a] (style of the i button)
-  [div] clear:both (Makes sure this and everything below is placed below floating elements further up)
-  #u-credit-view [div] (Container of the credit window, hidden when Otherwise window is shown)
-    .fader [div] (The faded grey area "behind" the credit window)
-      [iframe] (Script "Start")
-    .modalcontainer [div] (Container of the actual Credit window)
-      .modalbox heritage [div] (The Credit window, heritage version, extension of normal version!)
-        .modalbox-title heritage [div] (Title of Credit window)
-          ::before (Displays heritage icon)
-        .credit [div] (Credit information)
-        .credit [div] (Button leading to the Otherwise window, only exists when credit:otherwise is in use)
-        .Dendo [div] (Heritage rate module and visual extras)
-          .heritage-rating-module [div] (Container of heritage rate module.)
-            .heritage-emblem [div] (Heritage icon)
-            .page-rate-widget-box [div] (The standard rate-box)
-              .rate-points [span] (The numerical rating)
-              .rateup btn btn-default [span] (+ button)
-              .ratedown btn btn-default [span] (- button)
-              .cancel btn btn-default [span] (x button)
-        ::after (Spacer in the Credit window)
-  #u-credit-otherwise [div] (The Otherwise window, showing additional text; hidden when Credit window is shown (only exists when credit:otherwise is in use))
-    .fader [div] (The faded grey area "behind" the credit window)
-      [iframe] (Script "Otherwise")
-    .modalcontainer [div] (Container of the actual Otherwise window)
-      .modalbox heritage [div] (The Otherwise window)
-        .modalbox-title [div] (Title of Otherwise window)
-        .credit otherwise[div] (Additional credit information)
-          .credit-back [div] (Back-button, returning to Credit window)
-          
-+++ Standalone Normal +++
-
-#page-content [div] (Container of everything you put in the edit window)
-  .creditRate [div] (Container of the credit button)
-    .creditButtonStandalone [div] (Container of the Standalone credit button)
-      .fa fa-info [a] (style of the i button)
-  [div] clear:both (Makes sure this and everything below is placed below floating elements further up)
-  #u-credit-view [div] (Container of the credit window, hidden when Otherwise window is shown)
-    .fader [div] (The faded grey area "behind" the credit window)
-      [iframe] (Script "Start")
-    .modalcontainer [div] (Container of the actual Credit window)
-      .modalbox-standalone (Container to edit the ::after-element)
-        .modalbox [div] (The Credit window)
-          .modalbox-title [div] (Title of Credit window)
-          .credit [div] (Credit information)
-          .credit [div] (Button leading to the Otherwise window, only exists when credit:otherwise is in use)
-          .modalbox-ratemodule [div] (Rating module in the Credit window)
-            .page-rate-widget-box [div] (The standard rate-box)
-              .rate-points [span] (The numerical rating)
-              .rateup btn btn-default [span] (+ button)
-              .ratedown btn btn-default [span] (- button)
-              .cancel btn btn-default [span] (x button)
-          ::after (Spacer in the Credit window)
-  #u-credit-otherwise [div] (The Otherwise window, showing additional text; hidden when Credit window is shown (only exists when credit:otherwise is in use))
-    .fader [div] (The faded grey area "behind" the credit window)
-      [iframe] (Script "Otherwise")
-    .modalcontainer [div] (Container of the actual Otherwise window)
-      .modalbox-standalone (Container to edit the ::after-element)
-        .modalbox [div] (The Otherwise window)
-          .modalbox-title [div] (Title of Otherwise window)
-          .credit otherwise[div] (Additional credit information)
-            .credit-back [div] (Back-button, returning to Credit window)
-*/
-
-/* +++ Credit- and Otherwise window +++ */
-/* --- Credit window containers, buttons etc. --- */
-
 #u-credit-view, #u-credit-otherwise {
     width: 100%;
     height: 100%;
@@ -126,10 +7,6 @@
     right: 0;
     position: fixed;
     display: flex;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
     z-index: 10;
 }
 #u-credit-view:not(:target), #u-credit-otherwise:not(:target) {
@@ -399,7 +276,7 @@
     height: 18px;
     display: inline-flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -652,9 +529,7 @@ display: inline-flex;
 
 
 
-
 /* ------------------------- FR SPECIFICS ------------------------- */
-
 
 :root {
     --ct_col_rate-link-hover: #c99;
@@ -679,12 +554,12 @@ display: inline-flex;
 .rate-box-with-credit-button .page-rate-widget-box .cancel a:hover {
     color: var(--ct_col_rate-link-hover);
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 0
 }
 .rate-box-with-credit-button .page-rate-widget-box .rate-points {
     border: var(--ct_brd_rate-primary);
     border-right: 0;
-    top: 0px
+    top: 0
 }
 
 .rate-box-with-credit-button .creditButton {
@@ -711,4 +586,71 @@ display: inline-flex;
 }
 .creditButton a:hover {
     color: var(--ct_col_rate-link-hover) !important
+}
+
+
+/* display:contents Method */
+    
+.modal-wrapper,
+.modal-wrapper > li .foldable-list-container {
+    list-style: none;
+    display: contents;
+}
+    
+.modal-wrapper > li > .pseudomodal-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 19;
+}
+    
+.modal-wrapper > li > .pseudomodal-container > .foldable-list-container.close a {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    z-index: -1;
+    background-color: rgba(0 0 0 / 0.35);
+    user-select: none;
+}
+    
+#page-content .modal-wrapper > li > .pseudomodal-container > .pseudomodal {
+    display: block;
+    width: 85%;
+    max-width: 40rem;
+    z-index: 1;
+    background-color: #fefefe;
+}
+.modal-wrapper > li > .pseudomodal-container > .pseudomodal > .pseudomodal-content {
+    padding: 0.75rem 1.5rem;
+    height: 60%;
+    max-height: 25rem;
+    overflow-y: auto;
+}
+    
+.modal-wrapper > li.folded > .pseudomodal-container {
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    visibility: hidden;
+}
+.modal-wrapper > li > .pseudomodal-container {
+    opacity: 1;
+    pointer-events: all;
+    user-select: auto;
+    visibility: visible;
+    transition: opacity 0.15s ease-out;
+    animation: 0.15s fademodal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fademodal {
+    99% { visibility: hidden; }
+    100% { visibility: visible; }
 }
